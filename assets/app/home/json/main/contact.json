@@ -1,0 +1,35 @@
+{
+  "title": "Contact",
+  "subtitle": "Do you want to contact me?",
+  "text": "Fill out the following form and I will contact you as soon as possible.",
+  "form": [
+    {
+      "element": "input",
+      "text": "Name",
+      "data": "name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "element": "input",
+      "text": "Email",
+      "data": "email",
+      "type": "email",
+      "required": true
+    },
+    {
+      "element": "input",
+      "text": "Affair",
+      "data": "affair",
+      "type": "text",
+      "required": true
+    },
+    {
+      "element": "textarea",
+      "text": "Message",
+      "data": "message",
+      "type": "text",
+      "required": true
+    }
+  ]
+}

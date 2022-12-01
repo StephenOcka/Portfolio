@@ -1,0 +1,37 @@
+[
+  {
+    "text": "Communication & Active Listening",
+    "image": {
+      "webp": "./assets/src/image/softSkill_listeningSpeaking.webp",
+      "alt": "Communication and Listening"
+    }
+  },
+  {
+    "text": "Planning",
+    "image": {
+      "webp": "./assets/src/image/softSkill_planning.webp",
+      "alt": "Planning"
+    }
+  },
+  {
+    "text": "Adaptation",
+    "image": {
+      "webp": "./assets/src/image/softSkill_adaptation.webp",
+      "alt": "Adaptation"
+    }
+  },
+  {
+    "text": "Decision Making",
+    "image": {
+      "webp": "./assets/src/image/softSkill_decisionMaking.webp",
+      "alt": "Decision Making"
+    }
+  },
+  {
+    "text": "Orientation to Results",
+    "image": {
+      "webp": "./assets/src/image/softSkill_orientationResults.webp",
+      "alt": "Orientation to Results"
+    }
+  }
+]

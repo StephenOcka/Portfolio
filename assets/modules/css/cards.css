@@ -1,0 +1,110 @@
+/* Default */
+@media only screen {
+  .card {
+    position: relative;
+    width: 250px;
+    color: transparent;
+    height: 200px;
+    background-color: rgb(34, 34, 34);
+    margin: 20px 50px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px 2px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  .card_imgbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(20px);
+  }
+  .card_imgbox_image {
+    --timeAnimation: 2.5s;
+    --heightImage: 50%;
+    -webkit-text-fill-color: transparent;
+    height: var(--heightImage);
+    animation: animated var(--timeAnimation) alternate infinite;
+  }
+  .card:hover .card_imgbox {
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 120px);
+    left: 120px;
+  }
+  .card_content {
+    position: absolute;
+    width: calc(100% - 80px);
+    height: 100%;
+    padding: 18px;
+    word-wrap: break-word;
+  }
+  .card_content_title {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    font-weight: 500;
+    transition: 1s;
+  }
+  .card:hover .card_content_title {
+    color: rgb(253, 0, 118);
+  }
+  .card_content_text {
+    font-size: 0.9em;
+    transition: 1s;
+    line-height: 1.15em;
+  }
+  .card:hover .card_content_text {
+    color: rgb(255, 255, 255);
+  }
+}
+/* Laptop */
+@media only screen and (min-width: 769px) {
+  .card_imgbox_image {
+    --heightImage: 80%;
+  }
+  .card:hover .card_imgbox {
+    width: 150px;
+    height: 150px;
+    top: calc(50% - 75px);
+  }
+  .card:nth-child(2n):hover .card_imgbox,
+  .card:nth-child(2n + 1):hover .card_imgbox {
+    left: -100px;
+  }
+  .card:nth-child(3n + 1):hover .card_imgbox {
+    left: 200px;
+  }
+  .card:nth-child(2n):hover .card_content,
+  .card:nth-child(2n + 1):hover .card_content {
+    right: 0;
+  }
+  .card:nth-child(3n + 1):hover .card_content {
+    left: 0;
+  }
+  .card_content_title {
+    font-size: 1.8em;
+  }
+  .card_content_text {
+    font-size: 1.1em;
+    transition: 1s;
+    line-height: 1.5em;
+  }
+}
+@keyframes animated {
+  0% {
+    height: calc(var(--heightImage) - 30%);
+  }
+  100% {
+    height: var(--heightImage);
+  }
+}

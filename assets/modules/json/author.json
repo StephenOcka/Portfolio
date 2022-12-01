@@ -1,0 +1,42 @@
+{
+  "author": "Esteban Padilla",
+  "birth": {
+    "month": "May",
+    "year": 1995
+  },
+  "nationality": "Mexican",
+  "image": {
+    "webp": "./assets/src/image/author.webp",
+    "alt": "Author"
+  },
+  "networks": [
+    {
+      "link": "https://github.com/StephenOcka",
+      "image": {
+        "webp": "./assets/src/image/soicalNetwork_gitHub.webp",
+        "alt": "GitHub"
+      }
+    },
+    {
+      "link": "https://www.linkedin.com/in/estebanpadillag/",
+      "image": {
+        "webp": "./assets/src/image/soicalNetwork_linkedin.webp",
+        "alt": "Linkedin"
+      }
+    },
+    {
+      "link": "https://www.instagram.com/stephenocka/",
+      "image": {
+        "webp": "./assets/src/image/soicalNetwork_instagram.webp",
+        "alt": "Instagram"
+      }
+    },
+    {
+      "link": "",
+      "image": {
+        "webp": "./src/assets/img/webp/soicalNetwork_cv.webp",
+        "alt": "CV"
+      }
+    }
+  ]
+}

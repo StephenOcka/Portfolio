@@ -1,0 +1,35 @@
+/* Default */
+@media only screen {
+  [data-header_author] {
+    cursor: default;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    height: 60px;
+  }
+  [data-header_author_image] {
+    align-self: center;
+    border-radius: 100%;
+    grid-area: 1/1;
+    min-width: 50px;
+    max-width: 60px;
+    width: 100%;
+    height: auto;
+    justify-self: end;
+  }
+  [data-header_author_text] {
+    align-self: center;
+    color: rgb(190, 159, 21);
+    font-size: 1.2em;
+    grid-area: 1/2;
+    backdrop-filter: blur(30px);
+    width: fit-content;
+  }
+}
+/* Laptop */
+@media only screen and (min-width: 769px) {
+  [data-header_author] {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+}

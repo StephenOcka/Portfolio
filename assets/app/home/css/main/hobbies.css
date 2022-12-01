@@ -1,0 +1,20 @@
+/* Default */
+@media only screen {
+  [data-main_hobbies] {
+    display: grid;
+    margin: 10px 0;
+    width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  [data-main_hobbies_title] {
+    color: rgb(184, 181, 29);
+    transition: 1s;
+    grid-area: 1/1;
+    place-self: center;
+  }
+  [data-main_hobbies_container] {
+    grid-area: 2/1;
+    place-self: center;
+  }
+}

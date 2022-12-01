@@ -1,0 +1,12 @@
+/* Default */
+@media only screen {
+  [footer_date] {
+    place-self: center;
+  }
+  [footer_date] > span {
+    font-size: 1.1em;
+  }
+  [footer_date] > span:hover {
+    cursor: default;
+  }
+}

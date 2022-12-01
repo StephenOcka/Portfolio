@@ -1,0 +1,9 @@
+/* Default */
+@media only screen {
+  [data-main_softSkills] {
+    background-color: var(--backgroundDefault);
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 5px 3px rgba(100, 100, 100, 0.5);
+    margin: 5px 0;
+  }
+}

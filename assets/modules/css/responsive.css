@@ -1,0 +1,21 @@
+/* Default */
+@media only screen {
+}
+/* Móvil M */
+@media only screen and (min-width: 321px) {
+}
+/* Móvil L */
+@media only screen and (min-width: 376px) {
+}
+/* Tablet */
+@media only screen and (min-width: 426px) {
+}
+/* Laptop */
+@media only screen and (min-width: 769px) {
+}
+/* Laptop L */
+@media only screen and (min-width: 1025px) {
+}
+/* 4K */
+@media only screen and (min-width: 1441px) {
+}

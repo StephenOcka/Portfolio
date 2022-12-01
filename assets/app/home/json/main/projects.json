@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Text Encryptor",
+    "proyect": "Oracle One | Challenge | Sprint 01",
+    "link": {
+      "demo": "https://stephenocka.github.io/TextEncryptor/",
+      "repository": "https://github.com/StephenOcka/TextEncryptor"
+    },
+    "image": {
+      "webp": "./assets/src/image/proyect_textEncriptor.webp",
+      "alt": "Text Encryptor"
+    }
+  },
+  {
+    "title": "Juego de Ahorcado",
+    "proyect": "Oracle One | Challenge | Sprint 02",
+    "link": {
+      "demo": "https://stephenocka.github.io/HangmanGame/",
+      "repository": "https://github.com/StephenOcka/HangmanGame"
+    },
+    "image": {
+      "webp": "./assets/src/image/proyect_hangmanGame.webp",
+      "alt": "Hangman Game"
+    }
+  }
+]

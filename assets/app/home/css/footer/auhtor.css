@@ -1,0 +1,11 @@
+/* Default */
+@media only screen {
+  [footer_author] {
+    display: flex;
+    justify-content: center;
+  }
+  [footer_author] > img {
+    border-radius: 100%;
+    width: 70px;
+  }
+}
