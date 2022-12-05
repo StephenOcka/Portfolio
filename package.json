@@ -2,7 +2,7 @@
   "name": "challenge_briefcase",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/assets/app/home/home.js",
   "type": "module",
   "devDependencies": {},
   "scripts": {

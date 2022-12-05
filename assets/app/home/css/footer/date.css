@@ -1,12 +1,20 @@
 /* Default */
 @media only screen {
-  [footer_date] {
+  [data-footer_date] {
     place-self: center;
+    grid-area: 3/1;
+    color: rgb(255, 255, 255);
   }
-  [footer_date] > span {
+  [data-footer_date] > span {
     font-size: 1.1em;
-  }
-  [footer_date] > span:hover {
     cursor: default;
+    backdrop-filter: blur(20px);
+    width: fit-content;
+  }
+}
+/* Laptop */
+@media only screen and (min-width: 769px) {
+  [data-footer_date] {
+    grid-area: 1/3;
   }
 }

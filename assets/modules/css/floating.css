@@ -5,20 +5,20 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
-  .floating_element {
+  .floating > .floating_element {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .floating_element_image {
+  .floating > .floating_element > .floating_element_image {
     --heightFloat: 9px;
     border-radius: 100%;
     height: 2em;
     transition: linear 1s;
     animation: float 7s ease-in-out infinite;
   }
-  .floating_element_image:hover {
+  .floating > .floating_element > .floating_element_image:hover {
     box-shadow: 0 0 3px 2px rgba(255, 255, 255, 0.1);
     cursor: pointer;
     scale: 1.3;
@@ -28,7 +28,7 @@
 }
 /* Laptop */
 @media only screen and (min-width: 769px) {
-  .floating_element_image {
+  .floating > .floating_element > .floating_element_image {
     --heightFloat: 12px;
     height: 2.5em;
   }

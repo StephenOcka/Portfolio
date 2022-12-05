@@ -6,11 +6,11 @@
     flex-direction: column;
     padding: 10px 0;
     margin: 10px 0;
-    width: 95%;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
-  [data-main_skills_title] {
+  [data-main_skills]>h2 {
     color: rgb(184, 181, 29);
     transform: translateY(10px);
     transition: 1s;
@@ -19,7 +19,7 @@
     backdrop-filter: blur(30px);
     width: fit-content;
   }
-  [data-main_skills_category] {
+  [data-main_skills]>section {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -27,14 +27,14 @@
     align-items: center;
     justify-content: center;
   }
-  [data-main_skills_category_title] {
+  [data-main_skills]>section>h3 {
     color: rgb(29, 180, 180);
     backdrop-filter: blur(30px);
     width: fit-content;
     text-align: center;
     padding: 0;
   }
-  [data-main_skills_category_container] {
+  [data-main_skills]>section>div {
     position: relative;
     width: 100%;
     display: flex;

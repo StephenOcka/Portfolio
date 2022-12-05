@@ -1,12 +1,16 @@
 /* Default */
 @media only screen {
+  :root{
+    --perspectivecardDV: 2000px;
+  }
   .cardDV {
     position: relative;
     width: 200px;
     height: 200px;
     transform-style: preserve-3d;
+    margin: 10px 0;
   }
-  .cardDV_face {
+  .cardDV>.cardDV_face {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,25 +23,31 @@
     backface-visibility: hidden;
     transition: 1.5s ease-in-out;
     border-radius: 15px;
-    transform: perspective(500px) rotateY(0deg);
+    transform: perspective(var(--perspectivecardDV)) rotateY(0deg);
     cursor: pointer;
     backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 2px 2px 3px 2px rgba(255, 255, 255, 0.1);
   }
-  .cardDV_face_front {
-    transform: perspective(500px) translateZ(50px);
+  .cardDV>.cardDV_face_front {
+    transform: perspective(var(--perspectivecardDV)) translateZ(50px);
   }
-  .cardDV:hover .cardDV_face_front {
-    transform: perspective(500px) rotateY(180deg);
+  .cardDV:hover>.cardDV_face_front {
+    transform: perspective(var(--perspectivecardDV)) rotateY(180deg);
   }
-  .cardDV_face_back {
+  .cardDV>.cardDV_face_back {
     color: rgb(255, 255, 255);
-    transform: perspective(500px) rotateY(180deg);
+    transform: perspective(var(--perspectivecardDV)) rotateY(180deg);
     flex-direction: column;
   }
-  .cardDV:hover .cardDV_face_back {
-    transform: perspective(500px) rotateY(360deg);
+  .cardDV:hover>.cardDV_face_back {
+    transform: perspective(var(--perspectivecardDV)) rotateY(360deg);
+  }
+}
+/* Laptop */
+@media only screen and (min-width: 769px) {
+  :root{
+    --perspectivecardDV: 500px;
   }
 }

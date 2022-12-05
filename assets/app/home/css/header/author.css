@@ -7,7 +7,7 @@
     grid-template-columns: auto auto;
     height: 60px;
   }
-  [data-header_author_image] {
+  [data-header_author] > img {
     align-self: center;
     border-radius: 100%;
     grid-area: 1/1;
@@ -17,7 +17,7 @@
     height: auto;
     justify-self: end;
   }
-  [data-header_author_text] {
+  [data-header_author] > span {
     align-self: center;
     color: rgb(190, 159, 21);
     font-size: 1.2em;
@@ -29,7 +29,6 @@
 /* Laptop */
 @media only screen and (min-width: 769px) {
   [data-header_author] {
-    display: grid;
     grid-template-columns: 30% 70%;
   }
 }

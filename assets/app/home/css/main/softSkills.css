@@ -1,9 +1,171 @@
 /* Default */
 @media only screen {
   [data-main_softSkills] {
-    background-color: var(--backgroundDefault);
-    border-radius: 0.5em;
-    box-shadow: 2px 2px 5px 3px rgba(100, 100, 100, 0.5);
-    margin: 5px 0;
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 20px;
+    grid-template-areas:
+      "title title"
+      "container container"
+      "previous next";
+  }
+  [data-main_softSkills] > h2 {
+    color: rgb(184, 181, 29);
+    transform: translateY(10px);
+    transition: 1s;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(30px);
+    width: fit-content;
+    grid-area: title;
+    place-self: center;
+  }
+  [data-main_softSkills_next]:hover,
+  [data-main_softSkills_previous]:hover {
+    scale: 1.5;
+    color: rgb(32, 130, 143);
+  }
+  .animation-softSkill_container{
+    animation: onBlurContainer infinite;
+  }
+  .animation-softSkill_container_title{
+    animation: onBlurTitle infinite;
+  }
+  .animation-softSkill_container_image{
+    animation: onBlurImage infinite;
+  }
+  [data-main_softSkills_next],
+  [data-main_softSkills_previous] {
+    place-self: center;
+    cursor: pointer;
+    transition: 1s;
+    content: "<";
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    user-select: none;
+  }
+  [data-main_softSkills_next] {
+    grid-area: next;
+  }
+  [data-main_softSkills_previous] {
+    grid-area: previous;
+  }
+  [data-main_softSkills_container] {
+    transform-style: preserve-3d;
+    width: 90%;
+    height: auto;
+    grid-area: container;
+    place-self: center;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 100px;
+    grid-template-areas: 
+    "title"
+    "image";
+    height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.1);
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 10px 0;
+    /* animation-duration: 2s;
+    animation-timing-function: linear; */
+  }
+  [data-main_softSkills_container] > h3 {
+    transform-style: preserve-3d;
+    place-self: center;
+    grid-area: title;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    transition: 1s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+  [data-main_softSkills_container] > img {
+    transform-style: preserve-3d;
+    place-self: center;
+    grid-area: image;
+    max-height: 80px;
+    max-width: 90%;
+    transition: 1s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+  }
+}
+/* Laptop */
+@media only screen and (min-width: 769px) {
+  [data-main_softSkills] {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "title title title"
+      "previous container next";
+  }
+  [data-main_softSkills_container] {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "image title";
+  }
+  [data-main_softSkills_container] > img {
+    max-height: 130px;
+  }
+  [data-main_softSkills_next],[data-main_softSkills_previous]{
+    font-size: 50px;
+  }
+  [data-main_softSkills_next] {
+    justify-self: left;
+  }
+  [data-main_softSkills_previous] {
+    justify-self: right;
+  }
+}
+@keyframes onBlurContainer{
+  0%{
+    /* width: 90%; */
+    transform: perspective(1000) rotatey("0deg");
+  }
+  50%{
+    /* width: 0%; */
+    transform: perspective(1000) rotatey("180deg");
+  }
+  100%{
+    /* width: 90%; */
+    transform: perspective(1000) rotatey("360deg");
+  }
+}
+@keyframes onBlurTitle{
+  0%{
+    scale: 100%;
+  }
+  40%{
+    scale: 0%;
+  }
+  60%{
+    scale: 0%;
+  }
+  100%{
+    scale: 100%;
+  }
+}
+@keyframes onBlurImage{
+  0%{
+    scale: 100%;
+  }
+  50%{
+    scale: 0%;
+  }
+  100%{
+    scale: 100%;
   }
 }

@@ -1,23 +1,33 @@
 /* Default */
 @media only screen {
-  [footer_network] {
+  [data-footer_network] {
     display: flex;
     justify-content: center;
+    grid-area: 2/1;
   }
-  [footer_network] > ul {
+  [data-footer_network_list] {
     width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
-  [footer_network] > ul > li > img {
+  [data-footer_network_list] > li > img {
     margin: 0 10px;
-    width: 35px;
-    animation: float 7s ease-in-out infinite;
+    height: 1.8em !important;
   }
-  [footer_network] > ul > li > img:hover {
+  [data-footer_network_list] > li > img:hover {
     cursor: pointer;
     scale: 1.3;
+  }
+}
+/* Laptop */
+@media only screen and (min-width: 769px) {
+  [data-footer_network] {
+    grid-area: 1/1;
+  }
+  [data-footer_network_list] > li > img {
+    margin: 0 10px;
+    height: 1.8em !important;
   }
 }

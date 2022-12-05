@@ -1,37 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/./assets/app/home/home.css">
+    <script type="module" src="./assets/app/home/home.js"></script>
+    <script src="/./assets/modules/js/background.js"></script>
     <title>Briefcase</title>
-    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <header data-header>
-      <!-- <section class="header_author" data-header_author></section> -->
-      <!-- <section class="header_menu" data-header_menu></section> -->
-    </header>
-    <main data-main>
-      <!-- <section data-main_banner></section> -->
-      <!-- <section data-main_aboutMe id="aboutMe"></section> -->
-      <!-- <section data-main_skills id="skills"></section> -->
-      <!-- <section data-main_softSkills id=""></section> -->
-      <!-- <section data-main_hobbies id="hobbies"></section> -->
-      <!-- <section data-main_education id="education"></section> -->
-      <!-- <section data-main_proyects id="projects"></section> -->
-      <!-- <section data-main_contact id="contact"></section> -->
-    </main>
-    <!-- <footer data-footer>
-        <section data-footer_date></section>
-        <section data-footer_author></section>
-        <section data-footer_network></section>
-    </footer> -->
-    <div id="large-header" class="large-header">
-      <canvas data-background></canvas>
+    <div class="background" data-background>
+      <canvas data-background_canvas></canvas>
     </div>
-    <!-- <script type="module" src="./src/app/home/js/home.js"></script> -->
-    <script src="./index.js"></script>
-    <!-- <script src="./src/modules/js/background.js"></script> -->
+    <header>
+      <div data-header_author>
+        <span>Esteban Padilla</span>
+      </div>
+      <div data-header_menu>
+        <ul>
+          <li onclick="window.location.href= '#aboutMe'">About Me</li>
+          <li onclick="window.location.href= '#experience'">Experience</li>
+          <li onclick="window.location.href= '#skills'">Skills</li>
+          <li onclick="window.location.href= '#softSkills'">Soft Skills</li>
+          <li onclick="window.location.href= '#hobbies'">Hobbies</li>
+          <li onclick="window.location.href= '#education'">Education</li>
+          <li onclick="window.location.href= '#contact'">Contact</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div data-main_banner>
+        <section>
+          <h1>Hi!, I'm Esteban Padilla.</h1>
+          <p>I am a web page developer.<br><br>I am currently participating in the 'Oracle ONE' project at 'Aluram Latam'.</p>
+          <ul class="floating" data-main_banner_list></ul>
+        </section>
+      </div>
+      <section data-main_aboutMe id="aboutMe">
+        <h2>ABOUT ME</h2>
+        <p>My name is Esteban Padilla, I was born in Mexico on May 23.<br><br> Trained at the 'National Polytechnic Institute' in the career of 'Civil Engineering'.<br><br>I have been part of the 'Oracle ONE Next Education' program since August 2022.<br><br>I am currently focused on the field of programming.</p>
+      </section>
+      <section data-main_experience id="experience">
+        <h2>EXPERIENCE</h2>
+        <div data-main_experience_container></div>
+      </section>
+      <section data-main_skills id="skills">
+        <h2>SKILLS</h2>
+      </section>
+      <section data-main_softSkills id="softSkills">
+        <h2>SOFT SKILLS</h2>
+        <div data-main_softSkills_next></div>
+        <div data-main_softSkills_previous></div>
+        <!-- <img data-main_softSkills_next src="/./assets/src/image/nextPrevious.webp" alt="Previous"> -->
+        <!-- <img data-main_softSkills_previous src="/./assets/src/image/nextPrevious.webp" alt="Next"> -->
+        <div data-main_softSkills_container></div>
+      </section>
+      <section data-main_hobbies id="hobbies">
+        <h2>HOBBIES</h2>
+        <div class="slider" data-main_hobbies_container></div>
+      </section>
+      <section data-main_education id="education">
+        <h2>EDUCATION</h2>
+        <div data-main_education_container></div>
+      </section>
+      <section data-main_contact id="contact">
+          <h2>CONTACT</h2>
+          <h3>Do you want to contact me?</h3>
+          <p>Fill out the following form and I will contact you as soon as possible.</p>
+          <form data-main_contact_form id="contact_form">
+            <fieldset data-main_contact_form_fieldset>
+              <label>Name</label>
+              <input data-main_contact_form_fieldset_contain required type= "text" placeholder="Name">
+            </fieldset>
+            <fieldset data-main_contact_form_fieldset>
+              <label>Email</label>
+              <input data-main_contact_form_fieldset_contain required type="email" placeholder="Email">
+            </fieldset>
+            <fieldset data-main_contact_form_fieldset>
+              <label>Affair</label>
+              <input data-main_contact_form_fieldset_contain required type="text" placeholder="Affair">
+            </fieldset>
+            <fieldset data-main_contact_form_fieldset>
+              <label>Message</label>
+              <textarea data-main_contact_form_fieldset_contain required placeholder="Message"></textarea>
+            </fieldset>
+            <button class="button_89" data-main_contact_button form="contact_form" type="submit">Send</button>
+          </form>
+      </section>
+    </main>
+    <footer>
+      <div data-footer_author></div>
+      <div data-footer_date>
+        <span>December / 2022</span>
+      </div>
+      <div data-footer_network>
+        <ul class="floating" data-footer_network_list></ul>
+      </div>
+      
+    </footer>
   </body>
 </html>

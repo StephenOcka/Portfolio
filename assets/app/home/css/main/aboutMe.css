@@ -2,13 +2,15 @@
 @media only screen {
   [data-main_aboutMe] {
     display: grid;
+    grid-gap: 10px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    padding: 10px 0;
-    margin: 20px 0 10px;
-    width: 95%;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 20px 0;
+    width: 100%;
   }
-  [data-main_aboutMe_title] {
+  [data-main_aboutMe]>h2 {
     color: rgb(184, 181, 29);
     grid-area: 1/1;
     place-self: center;
@@ -18,33 +20,20 @@
     font-size: 1.5em;
     border-radius: 5px;
   }
-  [data-main_aboutMe_container] {
+  [data-main_aboutMe]>p {
     place-self: center;
     grid-area: 2/1;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     box-shadow: 2px 2px 5px 3px rgba(255, 255, 255, 0.1);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    backdrop-filter: blur(20px);
-    padding: 15px;
-    width: 95%;
-  }
-  [data-main_aboutMe_container_author] {
-    grid-area: 1/1;
-  }
-  [data-main_aboutMe_container_text] {
-    grid-area: 2/1;
-  }
-  [data-main_aboutMe_container_text],
-  [data-main_aboutMe_container_author] {
-    color: rgb(255, 255, 255);
-    place-self: center;
     text-align: center;
-    width: 100%;
-    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    padding: 15px 0;
+    width: 95%;
+    font-size: 1.1em;
     transition: 1s;
+    padding: 15px 10px;
   }
 }
 /* Laptop */
@@ -53,11 +42,11 @@
     grid-template-columns: 70% auto;
     grid-template-rows: 1fr;
   }
-  [data-main_aboutMe_title] {
+  [data-main_aboutMe]>h2 {
     grid-area: 1/2;
     padding: 0;
   }
-  [data-main_aboutMe_container] {
+  [data-main_aboutMe]>p {
     grid-area: 1/1;
   }
 }

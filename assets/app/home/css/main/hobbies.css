@@ -2,12 +2,13 @@
 @media only screen {
   [data-main_hobbies] {
     display: grid;
-    margin: 10px 0;
-    width: 95%;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 100%;
   }
-  [data-main_hobbies_title] {
+  [data-main_hobbies]>h2 {
     color: rgb(184, 181, 29);
     transition: 1s;
     grid-area: 1/1;

@@ -1,4 +1,5 @@
-export class customError {
+export class validity {
+  static #valid;
   static #typeInput = [
     "button",
     "checkbox",
@@ -64,25 +65,38 @@ export class customError {
     url: {},
     week: {},
   };
-  //   static error(element, typeElement) {
-  //     if (!element.validity.valid) {
-  //       let message = "";
-  //       for (let error of this.#typeError) {
-  //         if (element.validity[error]) {
-  //           message = this.#errorMessage[typeElement][error];
-  //         }
-  //       }
-  //       return element.setCustomValidity(message);
-  //     }
-  //   }
-  //   static reportInvalidity(array) {
-  //     let valid = true;
-  //     for (let element of array) {
-  //       if (!element.validity.valid) {
-  //         element.reportValidity();
-  //         valid = false;
-  //         break;
-  //       }
-  //     }
-  //   }
+  static customError(element) {
+    if (!element.validity.valid) {
+      const type = element.getAttribute("type");
+      let message = "";
+      for (let error of this.#typeError) {
+        if (element.validity[error]) {
+          if (type === (undefined || null)) {
+            message = this.#errorMessage["text"][error];
+          } else {
+            message = this.#errorMessage[type][error];
+          }
+        }
+      }
+      return element.setCustomValidity(message);
+    }
+  }
+  static reportInvalidity(elements) {
+    for (let element of elements) {
+      if (!element.validity.valid) {
+        element.reportValidity();
+        this.#valid = false;
+        break;
+      } else {
+        this.#valid = true;
+      }
+    }
+  }
+  static sendEmail(form) {
+    if (this.#valid) {
+      console.log("Send");
+      form.action = "https://formsubmit.co/fknxception.x_o@hotmail.com";
+      form.method = "POST";
+    }
+  }
 }

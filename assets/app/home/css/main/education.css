@@ -4,13 +4,13 @@
     color: rgba(0, 0, 0, 0.75);
     margin: 10px 0;
     padding: 10px 0;
-    width: 95%;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    width: 100%;
   }
-  [data-main_education_title] {
+  [data-main_education]>h2 {
     grid-area: 1/1;
     place-self: center;
     color: rgb(184, 181, 29);
@@ -26,22 +26,22 @@
     grid-area: 2/1;
     margin: 10px 0;
   }
-  [data-main_education_container_element] {
+  [data-main_education_container]>div {
     place-self: center;
   }
-  [data-main_education_container_element_content_title] {
+  [data-main_education_container]>div>section>h3 {
     color: rgb(253, 0, 118);
     margin: 5px 0;
     cursor: pointer;
   }
-  [data-main_education_container_element_content_institute],
-  [data-main_education_container_element_content_year] {
+  [data-main_education_container]>div>section>p,
+  [data-main_education_container]>div>section>span {
     margin: 5px 0;
-    font-size: 1.4em;
+    font-size: 1.15em;
     max-width: 100%;
     cursor: pointer;
   }
-  [data-main_education_container_element_content_image] {
+  [data-main_education_container]>div>div>img {
     max-height: 90%;
     max-width: 90%;
   }

@@ -23,7 +23,7 @@
     touch-action: manipulation;
     width: fit-content;
     height: fit-content;
-    margin: 30px 5px;
+    margin: 15px 5px;
     cursor: pointer;
   }
   .button_89:hover,
