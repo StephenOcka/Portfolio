@@ -1,6 +1,6 @@
-@import "/./assets/app/home/css/footer/auhtor.css";
-@import "/./assets/app/home/css/footer/date.css";
-@import "/./assets/app/home/css/footer/network.css";
+@import "./assets/app/home/css/footer/auhtor.css";
+@import "./assets/app/home/css/footer/date.css";
+@import "./assets/app/home/css/footer/network.css";
 /* Default */
 @media only screen {
   footer {

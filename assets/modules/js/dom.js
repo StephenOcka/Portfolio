@@ -3,7 +3,7 @@ import { dataBase } from "../../config/database.js";
 export class DOM {
   static modify = class {
     static image(img, src = "", alt = "") {
-      img.src = src == "" ? "/./assets/src/image/notFound.png" : src;
+      img.src = src == "" ? "./assets/src/image/notFound.png" : src;
       img.alt = alt;
     }
   };
@@ -36,7 +36,7 @@ export class DOM {
     };
     static image(src="", alt = "") {
       const img = document.createElement("img");
-      img.src = src == "" ? "/./assets/src/image/notFound.png" : src;
+      img.src = src == "" ? "./assets/src/image/notFound.png" : src;
       img.alt = alt;
       return img;
     }

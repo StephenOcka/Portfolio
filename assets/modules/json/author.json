@@ -1,35 +1,35 @@
 {
   "name": "Esteban Padilla",
   "image": {
-    "webp": "/./assets/src/image/author.webp",
+    "webp": "./assets/src/image/author.webp",
     "alt": "Author"
   },
   "networks": [
     {
       "link": "https://github.com/StephenOcka",
       "image": {
-        "webp": "/./assets/src/image/soicalNetwork_gitHub.webp",
+        "webp": "./assets/src/image/soicalNetwork_gitHub.webp",
         "alt": "GitHub"
       }
     },
     {
       "link": "https://www.linkedin.com/in/estebanpadillag/",
       "image": {
-        "webp": "/./assets/src/image/soicalNetwork_linkedin.webp",
+        "webp": "./assets/src/image/soicalNetwork_linkedin.webp",
         "alt": "Linkedin"
       }
     },
     {
       "link": "https://www.instagram.com/stephenocka/",
       "image": {
-        "webp": "/./assets/src/image/soicalNetwork_instagram.webp",
+        "webp": "./assets/src/image/soicalNetwork_instagram.webp",
         "alt": "Instagram"
       }
     },
     {
       "link": "",
       "image": {
-        "webp": "/./assets/src/image/soicalNetwork_cv.webp",
+        "webp": "./assets/src/image/soicalNetwork_cv.webp",
         "alt": "CV"
       }
     }
