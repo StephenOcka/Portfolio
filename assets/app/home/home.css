@@ -1,13 +1,13 @@
 /* MODULES */
-@import "./assets/modules/css/reset.css";
-@import "./assets/modules/css/base.css";
-@import "./assets/modules/css/background.css";
-@import "./assets/modules/css/button_89.css";
-@import "./assets/modules/css/cardDV.css";
-@import "./assets/modules/css/cards.css";
-@import "./assets/modules/css/floating.css";
-@import "./assets/modules/css/slider.css";
+@import url("../../modules/css/reset.css");
+@import url("../../modules/css/base.css");
+@import url("../../modules/css/background.css");
+@import url("../../modules/css/button_89.css");
+@import url("../../modules/css/cardDV.css");
+@import url("../../modules/css/cards.css");
+@import url("../../modules/css/floating.css");
+@import url("../../modules/css/slider.css");
 /* PAGE */
-@import "./assets/app/home/css/header.css";
-@import "./assets/app/home/css/main.css";
-@import "./assets/app/home/css/footer.css";
+@import url("./css/header.css");
+@import url("./css/main.css");
+@import url("./css/footer.css");

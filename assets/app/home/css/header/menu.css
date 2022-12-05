@@ -23,7 +23,6 @@
     transition: 0.4s;
     backdrop-filter: blur(30px);
     width: max-content;
-    /* min-width: fit-content; */
   }
   [data-header_menu] > ul > li:hover {
     color: rgb(255, 0, 0);

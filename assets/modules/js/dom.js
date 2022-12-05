@@ -34,7 +34,7 @@ export class DOM {
         });
       }
     };
-    static image(src="", alt = "") {
+    static image(src = "", alt = "") {
       const img = document.createElement("img");
       img.src = src == "" ? "./assets/src/image/notFound.png" : src;
       img.alt = alt;

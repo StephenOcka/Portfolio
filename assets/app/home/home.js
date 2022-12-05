@@ -106,50 +106,50 @@ class createDom {
           h3.textContent = element.title;
           DOM.modify.image(img, element.image.webp, element.image.alt);
         }
-        function animation(){
+        function animation() {
           let animation, deleteAnimation;
-          animation=setTimeout(()=>{
+          animation = setTimeout(() => {
             parent.classList.add("animation-softSkill_container");
             h3.classList.add("animation-softSkill_container_title");
             img.classList.add("animation-softSkill_container_image");
             nextImage.disabled = true;
-          },0)
-          setTimeout(()=>{
+          }, 0);
+          setTimeout(() => {
             showImage(images[i]);
-          },1000);
-          deleteAnimation = setTimeout(()=>{
+          }, 1000);
+          deleteAnimation = setTimeout(() => {
             parent.classList.remove("animation-softSkill_container");
             h3.classList.remove("animation-softSkill_container_title");
             img.classList.remove("animation-softSkill_container_image");
             nextImage.disabled = false;
-          },2000);
+          }, 2000);
         }
         softSkills.forEach((element) => {
           images.push(element);
         });
         const nextImage = document.querySelector("[data-main_softSkills_next]");
-        nextImage.textContent=">"
+        nextImage.textContent = ">";
         nextImage.addEventListener("click", (e) => {
           e.preventDefault();
           i++;
           if (i == images.length) {
             i = 0;
           }
-          if(!nextImage.disabled){
+          if (!nextImage.disabled) {
             animation();
           }
         });
         const previousImage = document.querySelector(
           "[data-main_softSkills_previous]"
         );
-        previousImage.textContent = "<"
+        previousImage.textContent = "<";
         previousImage.addEventListener("click", (e) => {
           e.preventDefault();
           i--;
           if (i < 0) {
             i = images.length - 1;
           }
-          if(!previousImage.disabled){
+          if (!previousImage.disabled) {
             animation();
           }
         });

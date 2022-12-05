@@ -1,5 +1,5 @@
-@import "./assets/app/home/css/header/author.css";
-@import "./assets/app/home/css/header/menu.css";
+@import "./header/author.css";
+@import "./header/menu.css";
 /* Default */
 @media only screen {
   header {

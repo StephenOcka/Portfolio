@@ -1,11 +1,11 @@
-@import "./assets/app/home/css/main/banner.css";
-@import "./assets/app/home/css/main/aboutMe.css";
-@import "./assets/app/home/css/main/experience.css";
-@import "./assets/app/home/css/main/contact.css";
-@import "./assets/app/home/css/main/education.css";
-@import "./assets/app/home/css/main/hobbies.css";
-@import "./assets/app/home/css/main/skills.css";
-@import "./assets/app/home/css/main/softSkills.css";
+@import "./main/banner.css";
+@import "./main/aboutMe.css";
+@import "./main/experience.css";
+@import "./main/contact.css";
+@import "./main/education.css";
+@import "./main/hobbies.css";
+@import "./main/skills.css";
+@import "./main/softSkills.css";
 /* Default */
 @media only screen {
   main {

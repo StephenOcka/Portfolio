@@ -32,7 +32,7 @@
     }
     findHighestNode(document.documentElement.childNodes);
     // return Math.max(window.innerHeight, pageHeight);
-    return pageHeight
+    return pageHeight;
   }
   function initHeader() {
     width = document.body.offsetWidth;

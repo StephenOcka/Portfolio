@@ -9,7 +9,7 @@
     padding: 10px 0;
     width: 100%;
   }
-  [data-main_experience]>h2 {
+  [data-main_experience] > h2 {
     color: rgb(184, 181, 29);
     transition: 1s;
     grid-area: 1/1;
@@ -24,7 +24,7 @@
     margin: 10px 0;
     width: 98%;
   }
-  [data-main_experience_container]>div {
+  [data-main_experience_container] > div {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -33,7 +33,7 @@
     place-self: center;
     padding: 10px 0;
   }
-  [data-main_experience_container]>div>img {
+  [data-main_experience_container] > div > img {
     max-width: 100%;
     max-height: 100%;
     place-self: center;
@@ -44,7 +44,7 @@
     cursor: default;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  [data-main_experience_container]>div>section {
+  [data-main_experience_container] > div > section {
     max-height: 80%;
     place-self: center;
     grid-area: 2/1;
@@ -52,7 +52,7 @@
     grid-template-columns: 1fr;
     transition: 2s;
   }
-  [data-main_experience_container]>div>section>* {
+  [data-main_experience_container] > div > section > * {
     max-width: 90%;
     width: fit-content;
     backdrop-filter: blur(15px);
@@ -61,7 +61,7 @@
     text-align: center;
     color: rgb(255, 255, 255);
   }
-  [data-main_experience_container]>div>section>div {
+  [data-main_experience_container] > div > section > div {
     display: flex;
     place-self: center;
     height: 50px;
@@ -76,31 +76,31 @@
   [data-main_experience] {
     grid-gap: 30px;
   }
-  [data-main_experience_container]>div {
+  [data-main_experience_container] > div {
     width: 50%;
     grid-template-rows: 1fr;
     grid-gap: 20px;
   }
-  [data-main_experience_container]>div>img {
+  [data-main_experience_container] > div > img {
     border-radius: 20px;
     cursor: pointer;
   }
-  [data-main_experience_container]>div>section {
+  [data-main_experience_container] > div > section {
     width: 50%;
     grid-area: 1/1;
     visibility: hidden;
   }
-  [data-main_experience_container]>div>section>* {
+  [data-main_experience_container] > div > section > * {
     margin: 10px 0;
   }
-  [data-main_experience_container]>div:hover>img {
+  [data-main_experience_container] > div:hover > img {
     transform: translateX(-40%);
   }
-  [data-main_experience_container]>div:hover>section {
+  [data-main_experience_container] > div:hover > section {
     transform: translateX(100%);
     visibility: visible;
   }
-  [data-main_experience_container]>div>section>div {
+  [data-main_experience_container] > div > section > div {
     margin: 10px 0;
     height: 70px;
     font-size: 0.8em;

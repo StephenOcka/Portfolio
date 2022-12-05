@@ -1,6 +1,6 @@
 /* Default */
 @media only screen {
-  :root{
+  :root {
     --perspectivecardDV: 2000px;
   }
   .cardDV {
@@ -10,7 +10,7 @@
     transform-style: preserve-3d;
     margin: 10px 0;
   }
-  .cardDV>.cardDV_face {
+  .cardDV > .cardDV_face {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,24 +30,24 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 2px 2px 3px 2px rgba(255, 255, 255, 0.1);
   }
-  .cardDV>.cardDV_face_front {
+  .cardDV > .cardDV_face_front {
     transform: perspective(var(--perspectivecardDV)) translateZ(50px);
   }
-  .cardDV:hover>.cardDV_face_front {
+  .cardDV:hover > .cardDV_face_front {
     transform: perspective(var(--perspectivecardDV)) rotateY(180deg);
   }
-  .cardDV>.cardDV_face_back {
+  .cardDV > .cardDV_face_back {
     color: rgb(255, 255, 255);
     transform: perspective(var(--perspectivecardDV)) rotateY(180deg);
     flex-direction: column;
   }
-  .cardDV:hover>.cardDV_face_back {
+  .cardDV:hover > .cardDV_face_back {
     transform: perspective(var(--perspectivecardDV)) rotateY(360deg);
   }
 }
 /* Laptop */
 @media only screen and (min-width: 769px) {
-  :root{
+  :root {
     --perspectivecardDV: 500px;
   }
 }
