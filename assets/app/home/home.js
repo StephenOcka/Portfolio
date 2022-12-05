@@ -14,7 +14,7 @@ class createDom {
   static main = class {
     static #banner() {
       const author = document.querySelector("[data-main_banner]");
-      DOM.create.author.image(author);
+      DOM.create.author.picture(author);
       const networks = document.querySelector("[data-main_banner_list]");
       DOM.create.author.networks(networks);
     }
@@ -23,11 +23,22 @@ class createDom {
         const parent = document.querySelector(
           "[data-main_experience_container]"
         );
-        experiences.forEach(({ title, proyect, link, image }) => {
+        experiences.forEach(({ title, proyect, link, image, technologies }) => {
           const h3 = document.createElement("h3");
           h3.textContent = title;
           const p = document.createElement("p");
           p.textContent = proyect;
+          const technologiesImplemented = document.createElement("ul");
+          console.log(technologies);
+          technologies.forEach((imgTechno) => {
+            const imgTechnology = DOM.create.image(
+              imgTechno.webp,
+              imgTechno.alt
+            );
+            const technology = document.createElement("li");
+            technology.appendChild(imgTechnology);
+            technologiesImplemented.appendChild(technology);
+          });
           const btnDemo = document.createElement("btn");
           btnDemo.classList.add("button_89");
           btnDemo.textContent = "View Demo";
@@ -46,6 +57,7 @@ class createDom {
           const content = document.createElement("section");
           content.appendChild(h3);
           content.appendChild(p);
+          content.appendChild(technologiesImplemented);
           content.appendChild(buttons);
           const img = DOM.create.image(image.webp, image.alt);
           const div = document.createElement("div");

@@ -1,8 +1,12 @@
 {
   "name": "Esteban Padilla",
+  "picture": {
+    "webp": "./assets/src/image/pictureAuthor.webp",
+    "alt": "Esteban Padilla"
+  },
   "image": {
     "webp": "./assets/src/image/author.webp",
-    "alt": "Author"
+    "alt": "Author Image"
   },
   "networks": [
     {

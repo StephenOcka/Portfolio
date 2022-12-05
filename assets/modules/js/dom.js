@@ -5,10 +5,17 @@ export class DOM {
     static image(img, src = "", alt = "") {
       img.src = src == "" ? "./assets/src/image/notFound.png" : src;
       img.alt = alt;
+      img.title = alt;
     }
   };
   static create = class {
     static author = class {
+      static picture(parent) {
+        dataBase.modules.author.then(({ picture }) => {
+          const img = DOM.create.image(picture.webp, picture.alt);
+          parent.appendChild(img);
+        });
+      }
       static image(parent) {
         dataBase.modules.author.then(({ image }) => {
           const img = DOM.create.image(image.webp, image.alt);
@@ -38,6 +45,7 @@ export class DOM {
       const img = document.createElement("img");
       img.src = src == "" ? "./assets/src/image/notFound.png" : src;
       img.alt = alt;
+      img.title = alt;
       return img;
     }
   };

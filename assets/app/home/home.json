@@ -10,10 +10,24 @@
       "image": {
         "webp": "./assets/src/image/proyect_textEncriptor.webp",
         "alt": "Text Encryptor"
-      }
+      },
+      "technologies": [
+        {
+          "webp": "./assets/src/image/skill_html5.webp",
+          "alt": "HTML5"
+        },
+        {
+          "webp": "./assets/src/image/skill_css3.webp",
+          "alt": "CSS3"
+        },
+        {
+          "webp": "./assets/src/image/skill_js.webp",
+          "alt": "Java Script"
+        }
+      ]
     },
     {
-      "title": "Juego de Ahorcado",
+      "title": "Hangman Game",
       "proyect": "Oracle One | Challenge | Sprint 02",
       "link": {
         "demo": "https://stephenocka.github.io/HangmanGame/",
@@ -22,7 +36,21 @@
       "image": {
         "webp": "./assets/src/image/proyect_hangmanGame.webp",
         "alt": "Hangman Game"
-      }
+      },
+      "technologies": [
+        {
+          "webp": "./assets/src/image/skill_html5.webp",
+          "alt": "HTML5"
+        },
+        {
+          "webp": "./assets/src/image/skill_css3.webp",
+          "alt": "CSS3"
+        },
+        {
+          "webp": "./assets/src/image/skill_js.webp",
+          "alt": "Java Script"
+        }
+      ]
     }
   ],
   "skills": {
