@@ -292,5 +292,27 @@ class createDom {
   }
 }
 (function () {
-  createDom.create();
+  sessionStorage.setItem("timeLoad", "3000");
+  document.addEventListener("readystatechange", (event) => {
+    let session = sessionStorage.getItem("complete");
+    let timeLoad = parseInt(sessionStorage.getItem("timeLoad"));
+    let background = document.querySelector("[data-background]");
+    if (event.target.readyState === "complete") {
+      background.classList.add("chargingScreen");
+      createDom.create();
+      if (session === null || session === undefined) {
+        sessionStorage.setItem("complete", "0");
+        setTimeout(() => {
+          background.classList.remove("chargingScreen");
+          background.classList.add("background");
+          document.body.style.overflowY = "auto";
+        }, timeLoad);
+      } else {
+        sessionStorage.setItem("complete", "1");
+        background.classList.remove("chargingScreen");
+        background.classList.add("background");
+        document.body.style.overflowY = "auto";
+      }
+    }
+  });
 })();

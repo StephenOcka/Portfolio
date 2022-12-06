@@ -1,11 +1,11 @@
-@import "./main/banner.css";
-@import "./main/aboutMe.css";
-@import "./main/experience.css";
-@import "./main/contact.css";
-@import "./main/education.css";
-@import "./main/hobbies.css";
-@import "./main/skills.css";
-@import "./main/softSkills.css";
+@import url("./main/banner.css");
+@import url("./main/aboutMe.css");
+@import url("./main/experience.css");
+@import url("./main/contact.css");
+@import url("./main/education.css");
+@import url("./main/hobbies.css");
+@import url("./main/skills.css");
+@import url("./main/softSkills.css");
 /* Default */
 @media only screen {
   main {

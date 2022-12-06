@@ -1,11 +1,26 @@
 // ORIGINAL CODE OBTAINED FROM:  https://codepen.io/MarcoGuglielmelli/pen/ExGYae
 // MODIFICATED BY: StephenOcka
 (() => {
-  setTimeout(() => {
-    initHeader();
-    initAnimation();
-    addListeners();
-  }, 2000);
+  document.addEventListener("readystatechange", (event) => {
+    let timeLoad = parseInt(sessionStorage.getItem("timeLoad"));
+    let session = sessionStorage.getItem("complete");
+    console.log(`background ${session}`)
+    if (event.target.readyState === "complete") {
+      if (session === null || session === undefined || session === "0") {
+        setTimeout(() => {
+          initHeader();
+          initAnimation();
+          addListeners();
+        }, timeLoad + 1000);
+      } else {
+        setTimeout(() => {
+          initHeader();
+          initAnimation();
+          addListeners();
+        }, 500);
+      }
+    }
+  });
   var width,
     height,
     largeHeader,
