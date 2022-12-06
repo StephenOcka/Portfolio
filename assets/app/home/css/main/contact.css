@@ -102,6 +102,7 @@
     background-color: transparent;
     border: none;
     place-self: center;
+    visibility: hidden;
   }
 }
 /* Laptop */

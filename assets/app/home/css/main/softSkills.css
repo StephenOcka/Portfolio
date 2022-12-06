@@ -45,7 +45,6 @@
     place-self: center;
     cursor: pointer;
     transition: 1s;
-    content: "<";
     font-size: 60px;
     color: rgb(255, 255, 255);
     user-select: none;
@@ -57,7 +56,6 @@
     grid-area: previous;
   }
   [data-main_softSkills_container] {
-    transform-style: preserve-3d;
     width: 90%;
     height: auto;
     grid-area: container;
@@ -77,8 +75,8 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 10px 0;
-    /* animation-duration: 2s;
-    animation-timing-function: linear; */
+    animation-duration: 2s;
+    animation-timing-function: linear;
   }
   [data-main_softSkills_container] > h3 {
     transform-style: preserve-3d;
@@ -133,16 +131,13 @@
 }
 @keyframes onBlurContainer {
   0% {
-    /* width: 90%; */
-    transform: perspective(1000) rotatey("0deg");
+    width: 90%;
   }
   50% {
-    /* width: 0%; */
-    transform: perspective(1000) rotatey("180deg");
+    width: 0%;
   }
   100% {
-    /* width: 90%; */
-    transform: perspective(1000) rotatey("360deg");
+    width: 90%;
   }
 }
 @keyframes onBlurTitle {

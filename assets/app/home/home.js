@@ -29,7 +29,6 @@ class createDom {
           const p = document.createElement("p");
           p.textContent = proyect;
           const technologiesImplemented = document.createElement("ul");
-          console.log(technologies);
           technologies.forEach((imgTechno) => {
             const imgTechnology = DOM.create.image(
               imgTechno.webp,
@@ -235,22 +234,26 @@ class createDom {
       );
       const btn = document.querySelector("[data-main_contact_button]");
       const form = document.querySelector("[data-main_contact_form]");
+      function checkEmptyInputs() {
+        for (let i = 0; i < inputs.length; i++) {
+          if (!inputs[i].value == "") {
+            btn.style.visibility = "visible";
+            break;
+          } else {
+            btn.style.visibility = "hidden";
+          }
+        }
+      }
       inputs.forEach((input) => {
+        validity.customError(input);
         input.addEventListener("focus", () => {
           input.previousElementSibling.style.display = "block";
         });
         input.addEventListener("blur", () => {
-          if (input.value.length == 0) {
-            input.previousElementSibling.style.display = "none";
-          }
-        });
-      });
-      inputs.forEach((input) => {
-        validity.customError(input);
-        input.addEventListener("blur", () => {
           validity.customError(input);
         });
-        input.addEventListener("keydown", () => {
+        input.addEventListener("keyup", () => {
+          checkEmptyInputs();
           validity.customError(input);
         });
       });

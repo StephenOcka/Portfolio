@@ -1634,11 +1634,7 @@
       (s = t._gsQueue))
     ) {
       for (n = 0; s.length > n; n++) s[n]();
-      for (r in p)
-        p[r].func ||
-          t.console.log(
-            "GSAP encountered missing dependency: com.greensock." + r
-          );
+      for (r in p) p[r].func || t.console.log(r);
     }
     o = !1;
   }

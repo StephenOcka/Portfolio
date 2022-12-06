@@ -94,7 +94,6 @@ export class validity {
   }
   static sendEmail(form) {
     if (this.#valid) {
-      console.log("Send");
       form.action = "https://formsubmit.co/fknxception.x_o@hotmail.com";
       form.method = "POST";
     }
