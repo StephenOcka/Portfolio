@@ -1,26 +1,7 @@
 // ORIGINAL CODE OBTAINED FROM:  https://codepen.io/MarcoGuglielmelli/pen/ExGYae
 // MODIFICATED BY: StephenOcka
 (() => {
-  document.addEventListener("readystatechange", (event) => {
-    let timeLoad = parseInt(sessionStorage.getItem("timeLoad"));
-    let session = sessionStorage.getItem("complete");
-    console.log(`background ${session}`)
-    if (event.target.readyState === "complete") {
-      if (session === null || session === undefined || session === "0") {
-        setTimeout(() => {
-          initHeader();
-          initAnimation();
-          addListeners();
-        }, timeLoad + 1000);
-      } else {
-        setTimeout(() => {
-          initHeader();
-          initAnimation();
-          addListeners();
-        }, 500);
-      }
-    }
-  });
+  loadingScreen();
   var width,
     height,
     largeHeader,
@@ -30,6 +11,18 @@
     target,
     animateHeader = true;
   // Main
+  function loadingScreen() {
+    document.addEventListener("readystatechange", (event) => {
+      let timeLoad = parseInt(sessionStorage.getItem("timeLoad"));
+      if (event.target.readyState === "complete") {
+        setTimeout(() => {
+          initHeader();
+          initAnimation();
+          addListeners();
+        }, timeLoad + 1000);
+      }
+    });
+  }
   function heightPage() {
     var pageHeight = 0;
     function findHighestNode(nodesList) {

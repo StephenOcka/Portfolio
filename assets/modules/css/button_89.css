@@ -1,11 +1,10 @@
 /* Default */
 @media only screen {
   .button_89 {
+    -webkit-user-select: none;
     --b: 3px;
     --s: 0.45em;
     --color: rgba(255, 255, 255, 0.8);
-    padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
-    color: var(--color);
     background: conic-gradient(
         from 90deg at var(--b) var(--b),
         #0000 90deg,
@@ -13,18 +12,19 @@
       )
       var(--s) var(--s) / calc(100% - var(--b) - 2 * var(--s))
       calc(100% - var(--b) - 2 * var(--s));
-    transition: 0.3s linear, color 0s, background-color 0s;
-    outline: var(--b) solid #0000;
-    outline-offset: 0.6em;
-    font-size: 1.1em;
     border: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: fit-content;
+    color: var(--color);
+    cursor: pointer;
+    font-size: 1.1em;
     height: fit-content;
     margin: 15px 5px;
-    cursor: pointer;
+    outline: var(--b) solid #0000;
+    outline-offset: 0.6em;
+    padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+    touch-action: manipulation;
+    transition: 0.3s linear, color 0s, background-color 0s;
+    user-select: none;
+    width: fit-content;
   }
   .button_89:hover,
   .button_89:focus-visible {

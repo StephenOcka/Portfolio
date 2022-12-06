@@ -1,7 +1,29 @@
 import { DOM } from "../../modules/js/dom.js";
 import { dataBase } from "../../config/database.js";
 import { validity } from "../../modules/js/validity.js";
+(function () {
+  loadScreen();
+})();
 class createDom {
+  static body = class {
+    static #scrollTop() {
+      const scrollTopContain = document.querySelector("[data-scrollTop]");
+      scrollTopContain.classList.add("scrollTop");
+      scrollTopContain.style.display = "none";
+      scrollTopContain.textContent = ">";
+      scrollTopContain.addEventListener("click", () => {
+        window.scroll({ top: 0 });
+      });
+      window.onscroll = () => {
+        const heightHeader = document.querySelector("header").clientHeight;
+        scrollTopContain.style.display =
+          window.scrollY > heightHeader ? "flex" : "none";
+      };
+    }
+    static init() {
+      this.#scrollTop();
+    }
+  };
   static header = class {
     static #author() {
       const parent = document.querySelector("[data-header_author]");
@@ -121,8 +143,8 @@ class createDom {
           let animation, deleteAnimation;
           animation = setTimeout(() => {
             parent.classList.add("animation-softSkill_container");
-            h3.classList.add("animation-softSkill_container_title");
-            img.classList.add("animation-softSkill_container_image");
+            h3.classList.add("animation-softSkill_container_text");
+            img.classList.add("animation-softSkill_container_text");
             nextImage.disabled = true;
           }, 0);
           setTimeout(() => {
@@ -130,8 +152,8 @@ class createDom {
           }, 1000);
           deleteAnimation = setTimeout(() => {
             parent.classList.remove("animation-softSkill_container");
-            h3.classList.remove("animation-softSkill_container_title");
-            img.classList.remove("animation-softSkill_container_image");
+            h3.classList.remove("animation-softSkill_container_text");
+            img.classList.remove("animation-softSkill_container_text");
             nextImage.disabled = false;
           }, 2000);
         }
@@ -286,33 +308,33 @@ class createDom {
     }
   };
   static create() {
+    this.body.init();
     this.header.init();
     this.main.init();
     this.footer.init();
   }
 }
-(function () {
-  sessionStorage.setItem("timeLoad", "3000");
+function loadScreen() {
+  sessionStorage.setItem("timeLoad", "2500");
   document.addEventListener("readystatechange", (event) => {
-    let session = sessionStorage.getItem("complete");
     let timeLoad = parseInt(sessionStorage.getItem("timeLoad"));
     let background = document.querySelector("[data-background]");
+    let header = document.querySelector("header");
+    let main = document.querySelector("main");
+    let footer = document.querySelector("footer");
+    background.classList.add("loadScreen");
+    header.classList.add("loadScreen_hiddenBody");
+    main.classList.add("loadScreen_hiddenBody");
+    footer.classList.add("loadScreen_hiddenBody");
     if (event.target.readyState === "complete") {
-      background.classList.add("chargingScreen");
       createDom.create();
-      if (session === null || session === undefined) {
-        sessionStorage.setItem("complete", "0");
-        setTimeout(() => {
-          background.classList.remove("chargingScreen");
-          background.classList.add("background");
-          document.body.style.overflowY = "auto";
-        }, timeLoad);
-      } else {
-        sessionStorage.setItem("complete", "1");
-        background.classList.remove("chargingScreen");
+      setTimeout(() => {
+        background.classList.remove("loadScreen");
         background.classList.add("background");
-        document.body.style.overflowY = "auto";
-      }
+        header.classList.remove("loadScreen_hiddenBody");
+        main.classList.remove("loadScreen_hiddenBody");
+        footer.classList.remove("loadScreen_hiddenBody");
+      }, timeLoad);
     }
   });
-})();
+}

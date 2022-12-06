@@ -11,29 +11,28 @@
     width: 100%;
   }
   [data-main_aboutMe] > h2 {
+    backdrop-filter: blur(30px);
+    border-radius: 5px;
     color: rgb(184, 181, 29);
+    font-size: 1.5em;
     grid-area: 1/1;
     place-self: center;
-    backdrop-filter: blur(30px);
-    width: fit-content;
     transition: 1s;
-    font-size: 1.5em;
-    border-radius: 5px;
+    width: fit-content;
   }
   [data-main_aboutMe] > p {
-    place-self: center;
-    grid-area: 2/1;
+    backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    box-shadow: 2px 2px 5px 3px rgba(255, 255, 255, 0.1);
-    text-align: center;
     color: rgb(255, 255, 255);
-    backdrop-filter: blur(20px);
-    padding: 15px 0;
-    width: 95%;
+    box-shadow: 2px 2px 5px 3px rgba(255, 255, 255, 0.1);
     font-size: 1.1em;
-    transition: 1s;
+    grid-area: 2/1;
     padding: 15px 10px;
+    place-self: center;
+    text-align: center;
+    transition: 1s;
+    width: 95%;
   }
 }
 /* Laptop */

@@ -1,29 +1,5 @@
 export class validity {
   static #valid;
-  static #typeInput = [
-    "button",
-    "checkbox",
-    "color",
-    "date",
-    "datetime-local",
-    "email",
-    "file",
-    "hidden",
-    "image",
-    "month",
-    "number",
-    "password",
-    "radio",
-    "range",
-    "reset",
-    "search",
-    "submit",
-    "tel",
-    "text",
-    "time",
-    "url",
-    "week",
-  ];
   static #typeError = [
     // More information in: https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation#validar_formularios_utilizando_javascript
     "patternMismatch",

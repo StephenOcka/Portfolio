@@ -1,45 +1,44 @@
 /* Default */
 @media only screen {
   [data-main_skills] {
-    margin: 5px 0;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
-    margin: 10px 0;
     justify-content: center;
-    align-items: center;
+    margin: 10px 0;
+    padding: 10px 0;
     width: 100%;
   }
   [data-main_skills] > h2 {
+    backdrop-filter: blur(30px);
     color: rgb(184, 181, 29);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
     transform: translateY(10px);
     transition: 1s;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    backdrop-filter: blur(30px);
     width: fit-content;
   }
   [data-main_skills] > section {
-    padding: 20px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
     justify-content: center;
+    padding: 20px;
+    width: 100%;
   }
   [data-main_skills] > section > h3 {
     color: rgb(29, 180, 180);
     backdrop-filter: blur(30px);
-    width: fit-content;
-    text-align: center;
     padding: 0;
+    text-align: center;
+    width: fit-content;
   }
   [data-main_skills] > section > div {
-    position: relative;
-    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
   }
 }

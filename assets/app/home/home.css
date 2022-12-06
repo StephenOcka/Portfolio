@@ -1,13 +1,14 @@
 /* MODULES */
 @import url("../../modules/css/reset.css");
 @import url("../../modules/css/base.css");
-@import url("../../modules/css/chargingScreen.css");
+@import url("../../modules/css/loadScreen.css");
 @import url("../../modules/css/background.css");
 @import url("../../modules/css/button_89.css");
 @import url("../../modules/css/cardDV.css");
 @import url("../../modules/css/cards.css");
 @import url("../../modules/css/floating.css");
 @import url("../../modules/css/slider.css");
+@import url("../../modules/css/scrollTop.css");
 /* PAGE */
 @import url("./css/header.css");
 @import url("./css/main.css");

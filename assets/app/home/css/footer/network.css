@@ -2,19 +2,19 @@
 @media only screen {
   [data-footer_network] {
     display: flex;
-    justify-content: center;
     grid-area: 2/1;
+    justify-content: center;
   }
   [data-footer_network_list] {
-    width: 90%;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    width: 90%;
   }
   [data-footer_network_list] > li > img {
-    margin: 0 10px;
     height: 1.8em !important;
+    margin: 0 10px;
   }
   [data-footer_network_list] > li > img:hover {
     cursor: pointer;
@@ -27,7 +27,7 @@
     grid-area: 1/1;
   }
   [data-footer_network_list] > li > img {
-    margin: 0 10px;
     height: 1.8em !important;
+    margin: 0 10px;
   }
 }

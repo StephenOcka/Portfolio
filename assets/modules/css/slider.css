@@ -4,76 +4,76 @@
     --perspectiveSlider: 10000px;
   }
   .slider {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
     animation: rotate 25s linear infinite;
-    transform: translateY(-10px);
+    height: 150px;
     margin: 100px 0 50px;
+    position: relative;
+    transform: translateY(-10px);
+    transform-style: preserve-3d;
+    width: 150px;
   }
   .slider > .slider_content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-    transform-origin: center;
-    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    cursor: pointer;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    height: 90%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform-origin: center;
+    transform-style: preserve-3d;
     transition: 1s;
-    backface-visibility: hidden;
-    cursor: pointer;
-    border-radius: 10px;
+    width: 90%;
   }
   .slider > .slider_content > * {
-    grid-area: 1/1;
-    transition: 1s;
-    place-self: center;
     backface-visibility: hidden;
+    grid-area: 1/1;
+    place-self: center;
+    transition: 1s;
   }
   .slider_content:hover > * {
     transform: translateY(-50px) scale(1.2);
   }
   .slider > .slider_content > .slider_content_background {
-    width: 100%;
-    height: 100%;
     background-color: rgb(34, 34, 34);
     border-radius: 10px;
     box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.1);
     grid-area: 1/1;
+    height: 100%;
+    width: 100%;
   }
   .slider > .slider_content > .slider_content_image {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
-    object-fit: cover;
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1;
+    border-radius: 10px;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
     grid-area: 1/1;
+    height: 90%;
+    left: 0;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    width: 90%;
+    z-index: 1;
   }
   .slider > .slider_content:hover > .slider_content_image {
     opacity: 10%;
   }
   .slider > .slider_content > .slider_content_text {
-    width: 95%;
-    border-radius: 5px;
-    text-align: center;
-    visibility: visible;
-    z-index: 2;
-    font-size: 1.15em;
-    color: rgb(0, 255, 13);
     backdrop-filter: blur(20px);
+    border-radius: 5px;
+    color: rgb(0, 255, 13);
+    cursor: pointer;
+    font-size: 1.15em;
     grid-area: 1/1;
     place-self: center;
-    cursor: pointer;
+    text-align: center;
+    visibility: visible;
+    width: 95%;
+    z-index: 2;
   }
 }
 /* Laptop */
@@ -85,13 +85,13 @@
     animation-duration: 15s;
   }
   .slider > .slider_content > .slider_content_text {
-    visibility: hidden;
-    color: transparent;
     backdrop-filter: blur(0);
+    color: transparent;
+    visibility: hidden;
   }
   .slider > .slider_content:hover .slider_content_text {
-    visibility: visible;
     color: rgb(0, 217, 255);
+    visibility: visible;
   }
 }
 @keyframes rotate {

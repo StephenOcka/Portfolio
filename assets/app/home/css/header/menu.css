@@ -16,20 +16,20 @@
   }
   [data-header_menu] > ul > li {
     align-self: center;
+    backdrop-filter: blur(30px);
     border-radius: 0.2em;
     color: rgb(27, 189, 189);
-    justify-self: center;
     font-size: 1.15em;
+    justify-self: center;
     transition: 0.4s;
-    backdrop-filter: blur(30px);
     width: max-content;
   }
   [data-header_menu] > ul > li:hover {
     color: rgb(255, 0, 0);
     cursor: pointer;
     scale: 1.3;
-    transform: translateY(-5px);
     text-shadow: 0em 0.5em 0.1em rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
   }
 }
 /* Laptop */

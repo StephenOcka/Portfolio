@@ -2,8 +2,8 @@
 @media only screen {
   [data-footer_author] {
     display: flex;
-    justify-content: center;
     grid-area: 1/1;
+    justify-content: center;
   }
   [data-footer_author] > img {
     border-radius: 100%;

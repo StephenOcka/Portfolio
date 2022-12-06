@@ -1,0 +1,30 @@
+/* Default */
+@media only screen {
+  .scrollTop {
+    align-items: center;
+    aspect-ratio: 1/1;
+    backdrop-filter: blur(30px);
+    background-color: transparent;
+    border-radius: 100%;
+    bottom: 17px;
+    color: rgb(12, 234, 241);
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: center;
+    position: fixed;
+    right: 17px;
+    transform: rotate(-90deg);
+    user-select: none;
+    width: 30px;
+    z-index: 50;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 426px) {
+  .scrollTop {
+    bottom: 25px;
+    font-size: 2em;
+    right: 25px;
+  }
+}

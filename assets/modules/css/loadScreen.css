@@ -1,0 +1,23 @@
+/* Default */
+@media only screen {
+  .loadScreen {
+    align-items: center;
+    background-color: black;
+    display: block;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+    z-index: 100;
+  }
+  .loadScreen::after {
+    content: url("../../src/image/author.webp");
+    height: 200px;
+    left: calc(50vw - 100px);
+    position: absolute;
+    top: calc(50vh - 100px);
+    width: 200px;
+  }
+  .loadScreen_hiddenBody {
+    display: none;
+  }
+}
