@@ -1,9 +1,5 @@
 /* Default */
 @media only screen {
-  :root {
-    --backgroundDefault: rgba(255, 255, 255, 1);
-    --colorAnimated: rgba(0, 0, 0, 0);
-  }
   ::-webkit-scrollbar {
     width: 5px;
     background-color: rgba(0, 0, 0, 0);
