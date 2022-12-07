@@ -1,5 +1,11 @@
 /* Default */
 @media only screen {
+  .animation-softSkill_container {
+    animation: onBlurContainer infinite;
+  }
+  .animation-softSkill_container_text {
+    animation: onBlurContain infinite;
+  }
   [data-main_softSkills] {
     align-items: center;
     display: grid;
@@ -77,7 +83,6 @@
     place-self: center;
     text-overflow: clip;
     transition: 1s;
-    transform-style: preserve-3d;
     width: 90%;
   }
   [data-main_softSkills_container] > img {
@@ -87,14 +92,7 @@
     max-height: 80px;
     max-width: 90%;
     place-self: center;
-    transform-style: preserve-3d;
     transition: 1s;
-  }
-  .animation-softSkill_container {
-    animation: onBlurContainer infinite;
-  }
-  .animation-softSkill_container_text {
-    animation: onBlurText infinite;
   }
 }
 /* Laptop */
@@ -136,7 +134,7 @@
     width: 90%;
   }
 }
-@keyframes onBlurText {
+@keyframes onBlurContain {
   0% {
     scale: 100%;
   }
